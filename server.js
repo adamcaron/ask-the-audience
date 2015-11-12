@@ -1,5 +1,7 @@
 const http = require('http');
 const express = require('express');
+const socketIo = require('socket.io');
+const io = socketIo(server);
 
 const app = express();
 
