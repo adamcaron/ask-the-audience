@@ -1,7 +1,5 @@
 const http = require('http');
 const express = require('express');
-const socketIo = require('socket.io');
-const io = socketIo(server);
 
 const app = express();
 
@@ -17,5 +15,8 @@ const server = http.createServer(app)
                 .listen(port, function () {
                   console.log('Listening on port ' + port + '.');
                 });
+
+const socketIo = require('socket.io');
+const io = socketIo(server);
 
 module.exports = server;
