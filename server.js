@@ -21,15 +21,19 @@ const io = socketIo(server);
 
 io.on('connection', function (socket) {
   console.log('A user has connected.', io.engine.clientsCount);
-
   io.sockets.emit('usersConnected', io.engine.clientsCount);
-
   socket.emit('statusMessage', 'You have connected.');
+
+  socket.on('message', function (channel, message) {
+    console.log(channel, message);
+  });
 
   socket.on('disconnect', function () {
     console.log('A user has disconnected.', io.engine.clientsCount);
     io.sockets.emit('usersConnected', io.engine.clientsCount);
   });
 });
+
+var votes = {};
 
 module.exports = server;
