@@ -1,0 +1,30 @@
+{
+  "name": "ask-the-audience",
+  "version": "1.0.0",
+  "description": "A real-time polling application useing WebSockets.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamcaron/ask-the-audience.git"
+  },
+  "keywords": [
+    "WebSockets",
+    "Node",
+    "JavaScript"
+  ],
+  "author": "Adam Caron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamcaron/ask-the-audience/issues"
+  },
+  "homepage": "https://github.com/adamcaron/ask-the-audience#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
+    "socket.io": "^1.3.7"
+  }
+}
