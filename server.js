@@ -25,7 +25,10 @@ io.on('connection', function (socket) {
   socket.emit('statusMessage', 'You have connected.');
 
   socket.on('message', function (channel, message) {
-    console.log(channel, message);
+    if (channel === 'voteCast') {
+      votes[socket.id] = message;
+      console.log(votes);
+    }
   });
 
   socket.on('disconnect', function () {
